@@ -107,7 +107,13 @@
   <div class="slide"><img src="images/3.png" alt="Image 3"></div>
 </div>
 <div class="slider-block"><span class="v4_84">Приветствуем всех творческих молодых людей, дизайнеров, видео-режиссеров! Мы обращаемся к Вам с просьбой обратить внимание на проблемы безопасности дорожного движения и сохранения жизни в Республике Хакасия. </span>
-  <span class="v4_90">Вместе мы можем сделать мир безопаснее и лучше для всех нас. Давайте объединим усилия и работать над этой важной проблемой вместе! Спасибо за вашу поддержку и внимание.</span></div>
+  <span class="v4_90">Вместе мы можем сделать мир безопаснее и лучше для всех нас. Давайте объединим усилия и работать над этой важной проблемой вместе! Спасибо за вашу поддержку и внимание.</span>        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+<div class="dots">
+  <span class="dot active" onclick="setCurrentSlide(0)"></span>
+  <span class="dot" onclick="setCurrentSlide(1)"></span>
+  <span class="dot" onclick="setCurrentSlide(2)"></span>
+</div>
       <div class="blik"></div>
     </div>
     <div class="v4_94"></div><span class="v5_1857">НАШИ КОНКУРСЫ</span>
@@ -333,6 +339,24 @@ function openRegistrationModal() {
         notification.style.display = 'none';
       }, 3000);
     });
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function changeSlide(n) {
+      currentSlide = (currentSlide + n + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
  </script>
 </body>
 
