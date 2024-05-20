@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class>
+  <div class="v1_2">
+    <div class="menu">
+        <div class="menu-item"><a href="index.html">Главная</a></div>
+        <div class="menu-item"><a href="fds.html">Конкурсы</a></div>
+        <div class="menu-item"><a href="#">Новости</a></div>
+        <div class="menu-item"><a href="$">Работы по годам</a></div>
+        <button class="bloktexta_uch" onclick="scrollToDiv()">
+            <a class="text_uch">УЧАСТВОВАТЬ</a>
+        </button>
+        
+        <div class="login-button-container" onmouseover="showButton()">
+          <button class="login-button" onclick="openLoginModal()">Вход</button>
+            <div id="loginModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeLoginModal()">&times;</span>
+                  <h2>Вход</h2>
+                  <form action="/login" method="POST">
+                      <div class="form-group">
+                          <label for="phone">Телефон:</label>
+                          <input type="tel" id="phone" name="phone" pattern="\+[7]{1}[0-9]{10}" title="Введите телефон в формате +7XXXXXXXXXX" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="password">Пароль:</label>
+                          <input type="password" id="password" name="password" required>
+                      </div>
+                      
+                      <button type="submit" class="btn"><span>Войти</span></button>
+                  </form>
+                  <p class="policy">Нажимая на кнопку "Войти", вы соглашаетесь с условиями использования.</p>
+              </div>
+          </div>
+
+            <button class="login-button" onclick="openRegistrationModal()">Регистрация</button>
+            <div id="registrationModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeRegistrationModal()">&times;</span>
+                  <h2>Регистрация</h2>
+                  <form action="success.html" method="POST" onsubmit="return validateForm()">
+                      <div class="form-group">
+                          <label for="name">Имя:</label>
+                          <input type="text" id="name" name="name" required pattern="[а-яА-ЯёЁ]+" title="Введите имя на русском языке">
+                      </div>
+                          
+                      <div class="form-group">
+                          <label for="surname">Фамилия:</label>
+                          <input type="text" id="surname" name="surname" required pattern="[а-яА-ЯёЁ]+" title="Введите фамилию на русском языке">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="patronymic">Отчество:</label>
+                          <input type="text" id="patronymic" name="patronymic" pattern="[а-яА-ЯёЁ]+" title="Введите отчество на русском языке">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="institution">Учебное заведение:</label>
+                          <input type="text" id="institution" name="institution" required>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="phone-registration">Телефон:</label>
+                        <input type="tel" id="phone-registration" name="phone" pattern="\+[7]{1}[0-9]{10}" title="Введите телефон в формате +7XXXXXXXXXX" required>
+                    </div>
+                    
+                      
+                      <div class="form-group">
+                          <label for="birthdate">Дата рождения:</label>
+                          <input type="date" id="birthdate" name="birthdate" required max="">
+                      </div>
+                          
+                      <div class="form-group">
+                          <label for="password">Пароль:</label>
+                          <input type="password" id="password" name="password" required>
+                      </div>
+                      
+                      
+                      <button type="submit" class="btn"><span>Зарегистрироваться</span></button>
+                  </form>
+                  <p class="policy">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования.</p>
+              </div>
+          </div>
+        </div>
+        
+      <span class="v4_61">РЕГИОНАЛЬНЫЙ</span>
+      <span class="v4_64">КОНКУРС ФОТОГРАФИЙ</span>
+      <span class="v4_70">И КОМПЬЮТЕРНОЙ</span>
+      <span class="v42_2">ГРАФИКИ И </span>
+      <span class="v4_76">ВИДЕОМОНТАЖА</span>
+      <span class="v5_1852">ПРИВЕТ
+ДРУГ</span>
+<div class="slider">
+  <div class="slide active"><img src="images/1.png" alt="Image 1"></div>
+  <div class="slide"><img src="images/2.png" alt="Image 2"></div>
+  <div class="slide"><img src="images/3.png" alt="Image 3"></div>
+</div>
+<div class="slider-block"><span class="v4_84">Приветствуем всех творческих молодых людей, дизайнеров, видео-режиссеров! Мы обращаемся к Вам с просьбой обратить внимание на проблемы безопасности дорожного движения и сохранения жизни в Республике Хакасия. </span>
+  <span class="v4_90">Вместе мы можем сделать мир безопаснее и лучше для всех нас. Давайте объединим усилия и работать над этой важной проблемой вместе! Спасибо за вашу поддержку и внимание.</span></div>
+      <div class="blik"></div>
+    </div>
+    <div class="v4_94"></div><span class="v5_1857">НАШИ КОНКУРСЫ</span>
+    <div class="v4_101">
+      <div class="v4_104"></div>
+      <div class="v4_135"></div>
+      <div class="v117_7">
+        <div class="v4_106"></div><span class="v4_109">Конкурс</span><span class="v4_112">Ты готов к настоящим приключениям?Покажи всю красоту, которая скрываетсяу тебя внутри и воплоти ее в жизнь набаннер!</span><span class="v4_115">Разработка макетабаннера соц. рекламы</span>
+        <div class="v4_117"></div><span class="v4_120">Более 300 000 людей записалось</span><span class="v4_126">Срок 1 декабря</span>
+        <div class="v4_128"></div><div class="v4_129"><button class="more-info" style="
+          background: none;
+          border: none;
+          font-family: Arimo;
+          font-weight: Bold;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 1);
+          cursor: pointer;
+          padding: 0;
+      ">Подробнее</button></div>
+        <div class="v4_132"></div>
+      </div>
+      <div class="v117_6">
+        <div class="v4_106"></div><span class="v4_202">Конкурс</span><span class="v4_208">Если ты достаточно освоил Premiere Proи научился монтировать динамичные ролики, то ты сделаешь оригинальные склейки и переходы для нашей акцииПРИТОРМОЗИ!</span><span class="v4_214">Монтажер</span>
+        <div class="v4_216"></div><span class="v4_219">Более 10 000 людей записалось</span><span class="v4_225">Срок 2 недели</span>
+        <div class="v4_231"></div>
+        <div class="v4_227"></div><div class="v4_228"><button class="more-info" style="
+          background: none;
+          border: none;
+          font-family: Arimo;
+          font-weight: Bold;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 1);
+          cursor: pointer;
+          padding: 0;
+      ">Подробнее</button></div></div>
+      <div class="v117_5">
+        <div class="v4_233"></div><span class="v4_236">Конкурс</span><span class="v4_239">К нам обратилась компаниястуденческих инициатив”За безопасность дорожногодвижения и сохранения жизни в Республике Хакасия”</span><span class="v4_242">Разработка логотипа</span>
+        <div class="v4_244"></div><span class="v4_247">Более 10 000 людей записалось</span><span class="v4_253">Срок до 1 ноября </span>
+        <div class="v4_255"></div><div class="v4_256"><button class="more-info" style="
+          background: none;
+          border: none;
+          font-family: Arimo;
+          font-weight: Bold;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 1);
+          cursor: pointer;
+          padding: 0;
+      ">Подробнее</button></div>
+        <div class="v4_259"></div>
+      </div>
+      <div class="v117_4">
+        <div class="v4_261"></div><span class="v4_264">Конкурс</span>
+        <div class="v12_5"></div><span class="v4_274">Решил, что очень хорош в созданиимакетах наклеек, то участвую в нашихакциях, в содружестве вместе с МВД.</span>
+        <div class="v4_276"></div>
+        <div class="v4_278"></div><div class="v4_279"><button class="more-info" style="
+          background: none;
+          border: none;
+          font-family: Arimo;
+          font-weight: Bold;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 1);
+          cursor: pointer;
+          padding: 0;
+      ">Подробнее</button></div>
+        <span class="v4_282">Более 10 000 людей записалось</span>
+        <span class="v117_3">Разработка наклеек МВД</span>
+        <span class="v4_288">Срок до 30 декабря</span></div>
+      <div class="v117_2">
+        <div class="v4_318"></div><span class="v4_321">Конкурс</span><span class="v4_328">Разработка макеталоготипа МВД</span><span class="v4_324">Если ты готов показать всю свои силуВ разработке нового логотипа для МВД,который будет на всех плакатах нашейстраны, то записывайся! </span>
+        <div class="v4_330"></div><span class="v4_333">Более 1 100 000 людей записалось</span><span class="v4_339">Срок до 1 июня</span>
+        <div class="v4_341"></div><div class="v4_342"><button class="more-info" style="
+          background: none;
+          border: none;
+          font-family: Arimo;
+          font-weight: Bold;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 1);
+          cursor: pointer;
+          padding: 0;
+      ">Подробнее</button></div>
+        <div class="v4_368"></div>
+      </div>
+    </div>
+    <div id="formModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeFormModal()">&times;</span>
+        <h2>Заявка на участие</h2>
+        <form class="form-container">
+          <input type="text" name="name" placeholder="Имя" required>
+          <input type="text" name="email" placeholder="Email" required>
+          <textarea name="details" placeholder="Детали" required></textarea>
+          <input type="file" name="file" required>
+          <label><input type="checkbox" name="agree" required> Согласен с <a href="#" class="privacy-link">политикой конфиденциальности</a></label>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div id="notification" class="notification">
+      Заявка принята!
+    </div>
+    <div class="v111_84"></div>
+    <span class="v111_85">© 2023 ХПК</span>
+    <span class="v111_86">Наши продукты</span>
+    <span class="v111_87"><a href="#">Конкурсы</a></span>
+    <span class="v111_88"><a href="#">Подготовка к конкурсам</a></span>
+    <span class="v111_89"><a href="#">Полезные инструменты</a></span>
+    <span class="v111_90"><a href="#">Полезные видео</a></span>
+    <span class="v111_91">Документы</span>
+    <span class="v111_92"><a href="#">Политика конфиденциальности</a></span>
+    <span class="v111_93"><a href="#">Договор-оферта</a></span>
+    <span class="v111_94"><a href="#">Договор-офера для юр. лиц</a></span>
+    <span class="v111_95">Связь с нами</span>
+    <span class="v111_96"><a href="#">Написать в Telegram</a></span>
+    <span class="v111_97"><a href="#">Вакансии</a></span>
+    <span class="v111_98"><a href="#">gustav_08@mail.ru</a></span>
+    <div class="v111_104"></div>
+    <div class="v111_110"></div>
+    <div class="v111_116"></div>
+    <div class="v111_122">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path>
+    </svg>
+  </div>
+    <div class="v111_123"></div>
+    <div class="v111_124"></div>
+    <div class="icon" onclick="toggleGif()">
+      <img src="images/v4_368.png" alt="Icon">
+    </div>
+    <div class="gif-container" id="gifContainer">
+      <img src="images/Flow 5@512p-25fps.gif" alt="Gif" id="gif">
+      <span class="close" onclick="closeGif()">Закрыть</span>
+    </div>
+  </div>
+  </div>
+  <script>
+    function showButton() {
+    var slash = document.querySelector('.slash');
+    slash.style.opacity = '1';
+}
+function scrollToDiv() {
+    var targetElement = document.querySelector('.v4_94');
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+slides[currentSlide].classList.add('active');
+
+// Функция для переключения слайдов
+function nextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+// Устанавливаем интервал для автоматического переключения слайдов
+setInterval(nextSlide, 3000);
+function toggleGif() {
+  var gifContainer = document.getElementById("gifContainer");
+  gifContainer.style.display = "block";
+}
+
+function closeGif() {
+  var gifContainer = document.getElementById("gifContainer");
+  gifContainer.style.display = "none";
+}
+function openRegistrationModal() {
+        var modal = document.getElementById("registrationModal");
+        modal.style.display = "block"; // Показываем модальное окно
+    }
+
+    // Функция закрытия модального окна
+    function closeRegistrationModal() {
+        var modal = document.getElementById("registrationModal");
+        modal.style.display = "none"; // Скрываем модальное окно
+    }
+
+    function validateForm() {
+    // Просто возвращаем true, так как повторное подтверждение пароля удалено
+    // Перенаправляем пользователя на другую страницу
+    window.location.href = "success.html";
+    return false; // Для предотвращения отправки формы
+}
+
+    function openLoginModal() {
+        var modal = document.getElementById("loginModal");
+        modal.style.display = "block"; // Показываем модальное окно
+    }
+
+    // Функция закрытия модального окна для входа
+    function closeLoginModal() {
+        var modal = document.getElementById("loginModal");
+        modal.style.display = "none"; // Скрываем модальное окно
+    }
+    document.getElementById("birthdate").max = new Date(new Date().setFullYear(new Date().getFullYear() - 14)).toISOString().split("T")[0];
+    const buttons = document.querySelectorAll('.more-info');
+    const formModal = document.getElementById('formModal');
+    const closeFormModalBtn = document.querySelector('.close');
+    const notification = document.getElementById('notification');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        formModal.style.display = 'block';
+      });
+    });
+
+    closeFormModalBtn.addEventListener('click', () => {
+      formModal.style.display = 'none';
+    });
+
+    window.onclick = (event) => {
+      if (event.target === formModal) {
+        formModal.style.display = 'none';
+      }
+    };
+
+    document.querySelector('.form-container').addEventListener('submit', (event) => {
+      event.preventDefault();
+      formModal.style.display = 'none';
+      notification.style.display = 'block';
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 3000);
+    });
+ </script>
+</body>
+
+</html>

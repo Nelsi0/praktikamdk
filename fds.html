@@ -1,0 +1,1195 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox Website</title>
+    <style>
+
+        h1{
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 88px
+        }
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 1920px;
+            overflow-x: hidden;
+        }
+        
+        header, footer {
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1880px;
+        }
+        
+        header .logo {
+            font-size: 24px;
+        }
+        
+        header .buttons {
+            display: flex;
+        }
+        
+        header .buttons button {
+            margin-left: 10px;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 10px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .main-content {
+            text-align: center;
+            margin-top: 20px;
+            width: 1920px;
+        }
+        
+        .main-content h1 {
+            margin: 0;
+        }
+        
+        .main-content .cta-button {
+    border: none;
+    border-radius: 20px;
+    padding: 11px 55px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            width: 1886px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            margin-right: -234px;
+            margin-left: 300px /* Расстояние между колонками */
+        }
+        
+        .footer-column:last-child {
+            margin-right: 0; /* Убираем отступ у последней колонки */
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        ul li {
+            margin-bottom: 10px; /* Расстояние между элементами списка */
+        }
+        
+        .cta-button {
+    margin-top: -74px; /* Сдвигаем кнопку вверх на 20px */
+    margin-left: -682px; /* Сдвигаем кнопку влево на 10px */
+}
+
+
+        .privetdrug{
+    margin-left:173px;
+    width: 381px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    font-weight: Bold;
+    font-size: 88px;
+    margin-top:50px;
+}
+.drug{
+    margin-right: 146px;
+}
+.slider {
+    display: none;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: -165px;
+    margin-left: 66%; /* Центрируем слайдер по горизонтали */
+    transform: translateX(-50%); /* Центрируем слайдер по горизонтали */
+    width: 761px;
+    border-radius: 20px;
+    height: 270px;
+    position: relative;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 0, 128, 0.5); /* Фиолетовый цвет с прозрачностью */
+    z-index: 1; /* Поверх слайдов */
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Плавная анимация */
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.gray-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ccc;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    z-index: 2; /* Поверх слайдов */
+}
+
+.gray-block:nth-child(1) {
+    margin-left: -350px; /* Располагаем первый блок влево от центра */
+}
+
+.gray-block:nth-child(2) {
+    margin-left: 150px; /* Располагаем второй блок вправо от центра */
+}
+
+
+.slide img {
+    width: 100%; /* Заполняем всю доступную ширину */
+    height: 100%;
+    object-fit: cover;
+    margin-top: -50px;
+}
+.menu {
+  width: 1920px;
+  height: 125px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  }
+  .menu-item {
+  color: rgb(0, 0, 0);
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  position: absolute;
+  top: 34px;
+  }
+  
+  .menu-item:nth-child(1) {
+  left: 803px;
+  width: 69px;
+  }
+  
+  .menu-item:nth-child(2) {
+  left: 891px;
+  width: 84px;
+  }
+  
+  .menu-item:nth-child(3) {
+  left: 994px;
+  width: 73px;
+  }
+  
+  .menu-item:nth-child(4) {
+    left: 1086px;
+    width: 170px;
+}
+  
+.login-button-container {
+  width: 133px;
+  height: 33px;
+  padding: 0px 15px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 31px;
+  left: 1326px;
+  display: inline-block;
+  cursor: pointer;
+  }
+  
+  .login-button {
+  background: none;
+  border: none;
+  font-family: Arimo;
+  font-weight: Bold;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  line-height: 33px;
+  }
+  
+  .slash {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  }
+  
+  .login-button-container:hover .slash {
+  opacity: 1;
+  }
+  .form-group {
+  margin-bottom: 25px;
+  }
+  
+  .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  }
+  
+  .form-group input {
+  width: calc(100% - 20px); /* Учитываем ширину кнопки */
+  padding: 10px;
+  border: 1px solid #000; /* Черная обводка */
+  border-radius: 5px;
+  }
+  .modal-content {
+  background-color: #fff;
+  width: 400px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .dasmat{
+    font-size: 18px;
+color: white;
+font-family: roboto;
+width: 630px;
+height: 100px;
+margin-top: -34px;
+margin-left: 675px;
+  }
+  .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  cursor: pointer;
+  }
+  .btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  }
+  
+  .btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: -1;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+  }
+  
+  .btn:hover:before {
+  transform: scaleX(0);
+  }
+  
+  .btn span {
+  position: relative;
+  z-index: 1;
+  }
+  
+  .btn:active:before {
+  transform: scaleX(1);
+  }
+  
+  .policy {
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+  }
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+  background-color: #fff;
+  width: 400px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .block1 {
+    width: 281px;
+    height: 100px;
+    background-color: #f0f0f0;
+    text-align: left;
+    margin-left: 1050;
+    padding: 40px;
+}
+.container {
+    display: flex;
+    background-color: #ccc;
+    text-align: left;
+    border-radius: 20px;
+    width: 1500px;
+    margin-left: 12em;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid orange;
+    margin-left: 163px;
+}
+.main-black {
+    background-color: black;
+    height: 2560px;
+}
+
+.main-black h2 {
+    color: white;
+    margin-top: 10px;
+    padding-top: 150px;
+    padding-left: 250px;
+    font-size: 60px;
+    font-family: roboto;
+}
+.photo-block {
+    width: 299px;
+    height: 414px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 250px;
+    margin-top: 76px;
+    background-color: white;
+}
+
+.photo-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contest-info {
+    display: flex;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    width: 1178px;
+    height: 284px;
+    margin-top: 90px;
+    margin-left: 240px;
+}
+
+.orange-line {
+    width: 2px;
+    height: 40px;
+    background-color: orange;
+    position: relative;
+    top: -45px;
+    left: 720px;
+}
+
+.content {
+    flex: 1;
+}
+
+.requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.requirement {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 718px;
+    position: relative;
+    top: -61px;
+    font-size: 18px;
+}
+.background-image {
+    background-image: url('images/frame\ \(3\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Прозрачность фотографии */
+}
+.blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.person-block {
+    width: calc(50% - 564px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 96px;
+    margin-left: 241px;
+    background-color: 1F1F1F;
+}
+
+.image-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* margin-right: 20px; */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+    padding-left: 117px;
+    margin-top: -69px;
+}
+
+.link {
+    color: orange;
+    text-decoration: none;
+}
+.v4_104 {
+    width: 420px;
+    height: 358px;
+    background: url(../пр/images/frame3.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 255px;
+    left: 227px;
+    overflow: hidden;
+}
+.v4_105 {
+    width: 420px;
+    height: 358px;
+    background: url(../пр/images/frame.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 945px;
+    left: 1285px;
+    overflow: hidden;
+}
+
+.v4_106 {
+    width: 157px;
+    height: 245px;
+    background: url(../пр/images/v4_93.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 1686px;
+    left: 1564px;
+    overflow: hidden;
+}
+.link:hover {
+    text-decoration: underline;
+}
+.faq {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 53vh;
+    margin-top: 105px;
+    padding-top: 105px;
+}
+.uspehi{
+    text-align: right;
+    color: white;
+    font-size: 40px;
+    font-family: Roboto;
+    width: 353px;
+    margin-top: -113px;
+    margin-left: 1255px;
+}
+.faq-container {
+    width: 80%;
+    max-width: 1080px;
+}
+        .faq-item {
+            border-bottom: 1px solid #444;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 15px 15px;
+        }
+        .razvi {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .containerAbc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 50;
+}
+
+.textXyz {
+    font-size: 40px;
+    font-family: roboto;
+}
+        .imagePqr {
+            max-width: 100px;
+            height: auto;
+        }
+        .asmat{
+            color: white;
+    font-size: 60px;
+    margin-top: -407px;
+    margin-left: 674px;
+    font-family: roboto;
+    width: 250px;
+    padding-bottom: 80px;
+        }
+        .itogi{
+
+    color: white;
+    font-size: 18px;
+    margin-left: 250px;
+    position: relative;
+    margin-top: 220px;
+
+        }
+        @media only screen and (min-width:320px) and (max-width: 1024px) {
+            header {
+    width: 1144px;
+    height: 50px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    width: 1154px;
+    height: 71px;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.menu-item:nth-child(1) {
+    left: 74px;
+    width: 116px;
+    font-size: 30px;
+}
+.menu-item:nth-child(2) {
+    left: 214px;
+    width: 139px;
+    font-size: 30px;
+}
+.menu-item:nth-child(3) {
+    left: 378px;
+    width: 119px;
+    font-size: 30px;
+}
+.menu-item:nth-child(4) {
+    left: 521px;
+    width: 247px;
+    font-size: 30px;
+}
+.login-button-container {
+    width: 229px;
+    height: 33px;
+    padding: 0px 15px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 34px;
+    left: 836px;
+    display: inline-block;
+    cursor: pointer;
+}
+.login-button {
+  background: none;
+  border: none;
+  font-family: Arimo;
+  font-weight: Bold;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  line-height: 33px;
+}
+.main-content {
+    text-align: center;
+    margin-top: 20px;
+    width: 1164px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 1164px;
+    height: 3070px;
+}
+.block1 {
+    width: 281px;
+    height: 100px;
+    background-color: #f0f0f0;
+    text-align: left;
+    margin-left: 710px;
+    padding: 40px;
+}
+.container {
+    display: flex;
+    background-color: #ccc;
+    text-align: left;
+    border-radius: 20px;
+    width: 1000px;
+    margin-left: 5em;
+}
+.main-black h2 {
+    color: white;
+    margin-top: 10px;
+    padding-top: 4px;
+    padding-left: 250px;
+    font-size: 60px;
+    font-family: roboto;
+}
+.photo-block {
+    width: 299px;
+    height: 414px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 83px;
+    margin-top: -31px;
+    background-color: white;
+}
+.asmat{
+    color: white;
+    font-size: 60px;
+    margin-top: -407px;
+    margin-left: 402px;
+    font-family: roboto;
+    width: 250px;
+
+}
+.dasmat {
+    font-size: 18px;
+    color: white;
+    font-family: roboto;
+    width: 630px;
+    height: 100px;
+    margin-top: -34px;
+    margin-left: 402px;
+}
+.itogi {
+    color: white;
+    font-size: 18px;
+    margin-left: 83px;
+    position: relative;
+    margin-top: 220px;
+}
+.contest-info {
+    display: flex;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    width: 1104px;
+    height: 284px;
+    margin-top: 90px;
+    margin-left: 6px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    width: 1142px;
+}
+.person-block {
+    width: calc(50% - 350px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-left: 84px;
+    background-color: 1F1F1F;
+}
+.uspehi {
+    text-align: right;
+    color: white;
+    font-size: 40px;
+    font-family: Roboto;
+    width: 353px;
+    margin-top: -113px;
+    margin-left: 783px;
+}
+.main-black {
+    background-color: black;
+    height: 2300px;
+}
+.v4_104 {
+    width: 420px;
+    height: 358px;
+    background: url(../пр/images/frame3.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 255px;
+    left: -40px;
+    overflow: hidden;
+}
+.v4_105 {
+    width: 383px;
+    height: 358px;
+    background: url(../пр/images/frame.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 945px;
+    left: 764px;
+    overflow: hidden;
+}
+.v4_106 {
+    width: 0px;
+    height: 0px;
+    background: url(../пр/images/v4_93.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 1686px;
+    left: 908px;
+    overflow: hidden;
+}
+        }
+    </style>
+
+<style>@keyframes rotate{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.geS5n{padding:34px 24px 24px!important}.question-ai-box{position:absolute;top:8px;right:8px}.question-ai-loading,.question-ai-ask,.question-ai-answer,.question-ai-error__network,.question-ai-error__tip,.question-ai-img{cursor:pointer;box-sizing:border-box;user-select:none;border-radius:12px;width:fit-content;height:24px;padding:4px;transition:all .3s ease-in-out;overflow:hidden}.question-ai-loading{background-color:#edf3ff;justify-content:center;align-items:center;max-width:150px;display:flex}.question-ai-loading__logo{transform-origin:50%;background-size:100% 100%;width:16px;height:16px;animation:1s linear infinite rotate}.question-ai-loading__title{color:#797a7a;margin:0 8px;font-size:12px}.question-ai-img{background-color:#edf3ff!important;display:flex!important}.question-ai-img__title{color:#005cff;white-space:nowrap;cursor:default;margin:0 4px;font-size:12px;font-weight:400}.question-ai-img__again{color:#131414;white-space:nowrap;cursor:pointer;border-left:1px solid #005cff;width:fit-content;height:16px;padding:0 8px;font-size:12px;font-weight:400}.question-ai-ask{background-color:#005cff;max-width:24px}.question-ai-ask:hover{max-width:400px;background-color:#edf3ff!important}.question-ai-ask:hover .question-ai-ask__hover{display:flex!important}.question-ai-ask:hover .question-ai-ask__logo{display:none!important}.question-ai-ask__close{cursor:pointer;background-size:100% 100%;width:16px;height:16px;position:absolute;top:-8px;right:-8px}.question-ai-ask__logo,.question-ai-ask__chat{background-size:100% 100%;width:16px;height:16px}.question-ai-ask__hover{justify-content:center;align-items:center;width:100%;display:none}.question-ai-ask__title{color:#005cff;white-space:nowrap;margin:0 4px;font-size:12px;font-weight:400}.question-ai-answer{background-color:#edf3ff;justify-content:center;align-items:center;display:flex}.question-ai-answer__text{color:#131414;white-space:nowrap;margin:0 4px;font-size:12px;font-weight:400}.question-ai-answer__text:hover{color:#005cff}.question-ai-answer__right{background-size:100% 100%;width:16px;height:16px}.question-ai-error__network{cursor:default}.question-ai-error__network,.question-ai-error__tip{background-color:#ffe6e3;justify-content:center;align-items:center;display:flex}.question-ai-error__icon{background-size:100% 100%;width:16px;height:16px}.question-ai-error__title{color:#ff3939;white-space:nowrap;margin:0 4px;font-size:12px;font-weight:400}.question-ai-error__again{color:#131414;white-space:nowrap;cursor:pointer;border-left:1px solid #ff3939;width:fit-content;height:16px;padding:0 8px;font-size:12px;font-weight:400}.question-ai-error__right{background-size:100% 100%;width:16px;height:16px}#close-copilot-dialog{color:#1f1f1f;background-color:#000000a3;width:100vw;height:100vh;font-size:14px;position:fixed;top:0;left:0;overflow:hidden}#close-copilot-dialog #close-copilot-card{box-sizing:border-box;background-color:#fff;border-radius:16px;width:388px;height:250px;padding:24px;position:fixed;top:50vh;left:50%;transform:translate(-50%,-50%)}#close-copilot-dialog #close-copilot-card .questionai-card-header{justify-content:space-between;align-items:center;width:100%;height:30px;margin-bottom:24px;display:flex}#close-copilot-dialog #close-copilot-card .questionai-card-header .title{color:#131414;text-align:center;font-family:PingFangSC-Semibold;font-size:20px;font-weight:600}#close-copilot-dialog #close-copilot-card .questionai-card-header img{cursor:pointer;width:24px;height:24px}#close-copilot-dialog #close-copilot-card .radio-item{margin-bottom:12px}#close-copilot-dialog #close-copilot-card .radio-item *{cursor:pointer}#close-copilot-dialog #close-copilot-card .radio-item label{color:#131414;flex-direction:row;align-items:center;font-family:PingFangSC-Regular;font-size:14px;display:flex}#close-copilot-dialog #close-copilot-card .radio-item label .radio-item__radio{opacity:0;position:absolute}#close-copilot-dialog #close-copilot-card .radio-item label .radio-item__indicate-img{flex:none;width:16px;margin-right:5px}#close-copilot-dialog #close-copilot-card .tips-item{color:#8c91ab;margin-bottom:20px;padding-left:6px;font-family:PingFangSC-Regular;font-size:12px;font-weight:400}#close-copilot-dialog #close-copilot-card .btn-box{justify-content:flex-end;align-items:center;width:100%;display:flex}#close-copilot-dialog #close-copilot-card .btn-box .cancel-btn,#close-copilot-dialog #close-copilot-card .btn-box .confirm-btn{box-sizing:border-box;text-align:center;cursor:pointer;border-radius:24px;width:fit-content;height:40px;padding:0 24px;font-family:PingFangSC-Semibold;font-size:12px;font-weight:600;line-height:40px}#close-copilot-dialog #close-copilot-card .btn-box .cancel-btn{color:#131414;background-color:#f5f5f5}#close-copilot-dialog #close-copilot-card .btn-box .confirm-btn{color:#fff;background-color:#005cff;margin-left:12px}.question-ai-guide__border{z-index:999;box-sizing:border-box;color:#131414;background-color:#fff;border-radius:16px;width:fit-content;height:48px;padding:1px;font-size:14px;position:absolute;top:-50px;right:4px}.question-ai-guide__box{box-sizing:border-box;background-image:linear-gradient(135deg,#ccdfff 0%,#b3faff 100%);border-radius:16px;align-items:center;width:100%;height:100%;padding:0 8px 0 16px;display:flex}.question-ai-guide__btn{box-sizing:border-box;cursor:pointer;background-color:#fff;border-radius:20px;width:fit-content;height:32px;margin-left:16px;padding:0 16px;line-height:32px}.question-ai-guide__borderdown{border-top:8px solid #fff;border-left:16px solid #0000;width:0;height:0;position:absolute;bottom:-8px;right:16px}.question-ai-guide__boxdown{z-index:9999;border-top:7px solid #b3faff;border-left:14px solid #0000;width:0;height:0;position:absolute;bottom:-6px;right:17px}.qai-single-pay-modal[data-v-4e6ce6]{z-index:2147400001;flex-direction:column;width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;line-height:normal;display:flex;position:fixed;top:0;right:0;overflow:hidden;box-shadow:0 8px 16px #919eab29}.qai-single-pay-modal .modal-mask[data-v-4e6ce6]{z-index:1;background:#000000a3;position:absolute;inset:0}.qai-single-pay-modal span[data-v-4e6ce6]{display:inline-block}.qai-single-pay-modal img[data-v-4e6ce6]{display:block}.qai-single-pay-modal .flex-center[data-v-4e6ce6]{align-items:center;display:flex}.qai-single-pay-modal .modal-body[data-v-4e6ce6]{z-index:2;box-sizing:border-box;background-image:linear-gradient(142deg,#e6efff 0%,#e0fdff 100%);border-radius:16px;flex-direction:column;align-items:center;width:396px;max-width:500px;max-height:90%;padding:0 12px 24px;transition:transform .2s ease-in-out;display:flex;position:absolute;top:50%;left:50%;transform:translate(-50%)translateY(-50%)}.qai-single-pay-modal .modal-body .flex-around[data-v-4e6ce6]{justify-content:space-around;align-items:center;display:flex}.qai-single-pay-modal .modal-body .toast[data-v-4e6ce6]{text-align:center;color:#fff;letter-spacing:0;text-align:center;background:#000c;border-radius:16px;max-width:360px;height:52px;margin:auto;padding:0 24px;font-family:PingFangSC-Regular;font-size:14px;font-weight:400;line-height:52px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.qai-single-pay-modal .modal-body .main-header[data-v-4e6ce6]{box-sizing:border-box;justify-content:space-between;align-items:center;width:100%;height:62px;display:flex;position:relative;overflow:hidden}.qai-single-pay-modal .modal-body .main-header .plus_bg[data-v-4e6ce6]{width:120px;height:120px;position:absolute;bottom:-10px;right:50px}.qai-single-pay-modal .modal-body .main-header .plus_logo[data-v-4e6ce6]{width:152px;height:32px;margin-left:12px}.qai-single-pay-modal .modal-body .main-header .icon_close[data-v-4e6ce6]{cursor:pointer;width:24px;height:24px;margin-right:4px}.qai-single-pay-modal .modal-body .main-white[data-v-4e6ce6]{background:#fffc;border-radius:16px;margin-bottom:24px;padding:32px}.qai-single-pay-modal .modal-body .main-white .title[data-v-4e6ce6]{color:#141414;letter-spacing:0;margin-bottom:24px;font-family:Helvetica;font-size:20px;font-weight:700;line-height:28px}.qai-single-pay-modal .modal-body .main-white .desc-list[data-v-4e6ce6]{color:#141414;letter-spacing:0;flex-direction:column;font-family:Helvetica;font-size:16px;font-weight:400;line-height:24px;display:flex;margin-left:0!important}.qai-single-pay-modal .modal-body .main-white .desc-list .item[data-v-4e6ce6]{align-items:center;display:flex;margin-bottom:16px!important}.qai-single-pay-modal .modal-body .main-white .desc-list .item[data-v-4e6ce6]:last-child{margin-bottom:0!important}.qai-single-pay-modal .modal-body .main-white .desc-list .item img[data-v-4e6ce6]{width:28px;height:28px;margin-right:16px}.qai-single-pay-modal .modal-body .btn_subscribe[data-v-4e6ce6]{text-align:center;color:#fff;cursor:pointer;background-image:linear-gradient(94deg,#8b48ff 0%,#5741ff 51%,#005cff 100%);border-radius:24px;width:308px;height:40px;font-family:Helvetica;font-size:16px;font-weight:700;line-height:40px}</style></head>
+<plasmo-csui id="qaiUnderlineWordShadowHostEl"></plasmo-csui>
+<body>
+
+<header>
+    <div class="menu">
+        <div class="menu-item"><a href="index.html">Главная</a></div>
+        <div class="menu-item"><a href="fds.html">Конкурсы</a></div>
+        <div class="menu-item"><a href="#">Новости</a></div>
+        <div class="menu-item"><a href="$">Работы по годам</a></div>
+       
+        <div class="login-button-container" onmouseover="showButton()">
+          <button class="login-button" onclick="openLoginModal()">Вход</button>
+            <div id="loginModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeLoginModal()">&times;</span>
+                  <h2 style="
+    color: black;
+">Вход</h2>
+                  <form action="/login" method="POST">
+                      <div class="form-group">
+                          <label for="phone">Телефон:</label>
+                          <input type="tel" id="phone" name="phone" pattern="\+[7]{1}[0-9]{10}" title="Введите телефон в формате +7XXXXXXXXXX" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="password">Пароль:</label>
+                          <input type="password" id="password" name="password" required>
+                      </div>
+                      
+                      <button type="submit" class="btn"><span>Войти</span></button>
+                  </form>
+                  <p class="policy">Нажимая на кнопку "Войти", вы соглашаетесь с условиями использования.</p>
+              </div>
+          </div>
+
+            <button class="login-button" onclick="openRegistrationModal()">Регистрация</button>
+            <div id="registrationModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeRegistrationModal()">&times;</span>
+                  <h2 style="
+    color: black;
+">Регистрация</h2>
+                  <form action="success.html" method="POST" onsubmit="return validateForm()">
+                      <div class="form-group">
+                          <label for="name">Имя:</label>
+                          <input type="text" id="name" name="name" required pattern="[а-яА-ЯёЁ]+" title="Введите имя на русском языке">
+                      </div>
+                          
+                      <div class="form-group">
+                          <label for="surname">Фамилия:</label>
+                          <input type="text" id="surname" name="surname" required pattern="[а-яА-ЯёЁ]+" title="Введите фамилию на русском языке">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="patronymic">Отчество:</label>
+                          <input type="text" id="patronymic" name="patronymic" pattern="[а-яА-ЯёЁ]+" title="Введите отчество на русском языке">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="institution">Учебное заведение:</label>
+                          <input type="text" id="institution" name="institution" required>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="phone-registration">Телефон:</label>
+                        <input type="tel" id="phone-registration" name="phone" pattern="\+[7]{1}[0-9]{10}" title="Введите телефон в формате +7XXXXXXXXXX" required>
+                    </div>
+                    
+                      
+                      <div class="form-group">
+                          <label for="birthdate">Дата рождения:</label>
+                          <input type="date" id="birthdate" name="birthdate" required max="">
+                      </div>
+                          
+                      <div class="form-group">
+                          <label for="password">Пароль:</label>
+                          <input type="password" id="password" name="password" required>
+                      </div>
+                      
+                      
+                      <button type="submit" class="btn"><span>Зарегистрироваться</span></button>
+                  </form>
+                  <p class="policy">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования.</p>
+              </div>
+          </div>
+        </div>
+</header>
+
+<div class="main-content">
+    <h1 style="line-height: 0.8;margin-right: 222px;">КОНКУРС<br>
+        <span style="margin-left: 61px;">РАЗРАБОТКА МАКЕТА</span><br>
+        <span style="margin-left: 105px;">ЛОГОТИПА</span><br>
+        <span style="margin-left: 284px;">МВД</span>
+        
+    </h1>
+    <div class="v4_104"></div>
+    <div class="block1">
+        <p>Если ты готов показать всю свои силу в разработке нового логотипа для МВД, который будет на всех баннерах нашей страны, то записывайся! </p>
+    </div>
+    <div class="container">
+        <div class="column">
+          <p>Длительность проведения:</p>
+          <p>7 месяцев</p>
+        </div>
+        <div class="column">
+          <p>Начало принятия работ:</p>
+          <p>1 декабря</p>
+        </div>
+        <div class="column">
+          <p>Формат конкурса:</p>
+          <p>онлайн</p>
+        </div>
+      </div>
+    
+     
+      
+      
+</div>
+<div class="main-black">
+    <h2>
+        Работа года
+    </h2>
+    <div class="photo-block">
+        <img src="images/12.png" alt="MCHS">
+    </div>
+    <div class="asmat"> Асматис</div>
+<div class="dasmat">За 2 года Асматис прошёл путь от простого парня увлечённого
+разработкой лого до востребованного редактора. В его портфолио
+логотипы для: АЭРОФЛОТ, ЦУМ, Пятерочка, Светофор, Крошка-Картошка, 
+Вкусно-и-Точка, Лада, Сбер.</div>
+<div class="itogi">Итоговая работа за 2023 год.</div>
+<div class="v4_105"></div>
+<div class="v4_106"></div>
+<div class="contest-info">
+    <div class="orange-line"></div>
+    <div class="orange-line1" style="
+    width: 2px;
+    height: 57px;
+    background-color: orange;
+    position: relative;
+    top: 39px;
+    left: 720px;
+"></div><div class="content">
+        <p style="
+    width: 567px;
+    margin-top: 74px;
+    position: relative;
+    font-size: 40px;
+    height: 10px;">
+    <strong style="">Что нужно для<br>прохождения конкурса?</strong></p>
+        <div class="requirements">
+            <div class="requirement">Компьютер или ноутбук для<br>разработки логотипа.</div>
+            <div class="requirement">Нет минимальных технических<br>требований к компьютеру/<br>ноутбуку.</div>
+        </div>
+    </div>
+</div>
+<div class="blocks-container">
+    <div class="person-block">
+        <div class="image-container">
+            <img src="photo1.jpg" alt="Фото">
+        </div>
+        <div class="info">
+            <p style="
+    color: white;
+">Никита Пирогов</p>
+            <a href="#" class="link">Выпускная работа →</a>
+        </div>
+    </div>
+    <div class="person-block">
+        <div class="image-container">
+            <img src="photo2.jpg" alt="Фото">
+        </div>
+        <div class="info">
+            <p style="
+    color: white;
+">Максим Бубнов</p>
+            <a href="#" class="link">Выпускная работа →</a>
+        </div>
+    </div>
+    <div class="person-block">
+        <div class="image-container">
+            <img src="photo3.jpg" alt="Фото">
+        </div>
+        <div class="info">
+            <p style="
+    color: white;
+">Андрей Глухов</p>
+            <a href="#" class="link">Выпускная работа →</a>
+        </div>
+    </div>
+    <div class="person-block">
+        <div class="image-container">
+            <img src="photo4.jpg" alt="Фото">
+        </div>
+        <div class="info">
+            <p style="
+    color: white;
+">Артем Прус</p>
+            <a href="#" class="link">Выпускная работа →</a>
+        </div>
+    </div>
+</div>
+<div class="uspehi">Успехи наших
+    студентов</div>
+    <div class="faq">
+        <div style="
+        font-size: 40px;
+        font-family: roboto;
+        position: relative;
+        margin-top: -64px;
+    ">FAQ</div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Если я совсем новичок, можно мне участвовать?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, конкурс открыт для всех уровней навыков, включая новичков. Наши конкурсы предназначены для стимулирования интереса к теме и развития участников на любом уровне.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Как организуются итоги конкурса?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Итоги конкурса будут объявлены на нашем веб-сайте и в социальных сетях в течение недели после завершения конкурса. Победители будут определены жюри на основе оценки креативности, качества выполнения и соответствия заданию.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>До какого числа проходит конкурс? Я могу отправить после окончания рабочего дня?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Дата окончания конкурса указана на странице с информацией о конкурсе. Обычно конкурс заканчивается в 23:59 (местного времени) указанной даты. Отправка работ после завершения конкурса не допускается.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Смогу ли я общаться с преподавателем во время обучения?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, в процессе обучения у вас будет доступ к преподавателям и организаторам конкурса для получения поддержки, ответов на вопросы и обратной связи по вашим работам.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Можно ли не отправлять работу, если у меня не получилось?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Участие в конкурсе необязательно, и вы вправе не отправлять свою работу. Однако мы рекомендуем вам принять участие, даже если вы не уверены в своих навыках. Это отличная возможность для практики и получения обратной связи.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Почему мне нужно записаться на конкурс именно сейчас? Я бы хотел попасть на следующий поток.</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Запись на конкурс открыта в ограниченный период времени. Участие в текущем потоке дает вам возможность начать свое обучение и соревнование уже сейчас, получить обратную связь и участие в сообществе. Однако если вы не успели в текущий поток, не волнуйтесь - следующий поток обычно открывается через несколько месяцев.</p>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="razvi">
+    <div class="containerAbc">
+        <div class="textXyz">РАЗВИВАЙСЯ В ТОМ, ЧТО ДЕЙСТВИТЕЛЬНО НРАВИТСЯ</div>
+        <img src="path_to_your_image.jpg" alt="Image" class="imagePqr">
+    </div>
+</div>
+<footer>
+    <div class="footer-column">
+        <ul>
+            <li>Наши продукты</li>
+            <li>Конкурсы</li>
+            <li>Подготовка к конкурсам</li>
+            <li>Полезные инструменты</li>
+            <li>Полезные видео</li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <ul>
+            <li>Документы</li>
+            <li>Политика конфиденциальности</li>
+            <li>Договор-оферта</li>
+            <li>Договор-офера для юр. лиц</li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <ul>
+            <li>Связь с нами</li>
+            <li>Написать в Telegram</li>
+            <li>Вакансии</li>
+            <li>gustav_08@mail.ru</li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+     function openRegistrationModal() {
+        var modal = document.getElementById("registrationModal");
+        modal.style.display = "block"; // Показываем модальное окно
+    }
+
+    // Функция закрытия модального окна
+    function closeRegistrationModal() {
+        var modal = document.getElementById("registrationModal");
+        modal.style.display = "none"; // Скрываем модальное окно
+    }
+
+    function validateForm() {
+    // Просто возвращаем true, так как повторное подтверждение пароля удалено
+    // Перенаправляем пользователя на другую страницу
+    window.location.href = "success.html";
+    return false; // Для предотвращения отправки формы
+}
+
+    function openLoginModal() {
+        var modal = document.getElementById("loginModal");
+        modal.style.display = "block"; // Показываем модальное окно
+    }
+
+    // Функция закрытия модального окна для входа
+    function closeLoginModal() {
+        var modal = document.getElementById("loginModal");
+        modal.style.display = "none"; // Скрываем модальное окно
+    }
+    document.getElementById("birthdate").max = new Date(new Date().setFullYear(new Date().getFullYear() - 14)).toISOString().split("T")[0];
+
+    document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const symbol = item.querySelector('span:last-child');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    symbol.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    symbol.textContent = '-';
+                }
+            });
+        });
+</script>
+
+
+</body><plasmo-csui id="qaiSidebarShadowHostEl"></plasmo-csui></html>
