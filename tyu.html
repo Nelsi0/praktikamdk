@@ -85,25 +85,94 @@
             border-radius: 5px;
             align-self: flex-start;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .footer-column {
-            flex: 1 1 30%;
-            margin-bottom: 20px;
-        }
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
+/* Стили для всего футера */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Стили для контейнера футера */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: black;
+}
+
+/* Стили для блоков футера */
+.footer-blocks {
+    flex: 1 0 300px;
+    margin-bottom: 20px;
+}
+
+/* Стили для заголовков блоков */
+.footer-blocks h2 {
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Стили для списка ссылок */
+.footer-blocks ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-left: 50px;
+}
+
+/* Стили для ссылок */
+.footer-blocks ul li {
+    margin-bottom: 5px;
+}
+
+/* Стили для ссылки */
+.footer-blocks ul a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Стили для копирайта */
+.footer-copyright {
+    margin-top: 20px;
+}
+.menu-item a  {
+    color: #000000 !important;
+    text-decoration: none;
+}
+.menu {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.menu-item {
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    font-weight: Regular;
+    font-size: calc(16px + 2 * (100vw / 1300));
+    position: absolute;
+    top: 34px;
+}
+  
+  .menu-item:nth-child(1) {
+    margin-right: 200px;
+}
+.menu-item:nth-child(2) {
+    margin-right: 0px;
+}
+.menu-item:nth-child(3) {
+    margin-left: 200px;
+}
+.menu-item:nth-child(4) {
+    margin-left: 450px;
+}
         @media (max-width: 768px) {
             .profile-form div {
                 flex: 1 1 100%;
@@ -116,21 +185,17 @@
 </head>
 <body>
     <header>
-        <div>Логотип</div>
-        <nav>
-            <a href="#">Информация</a>
-            <a href="#">Сменить пароль</a>
-            <a href="#">Уведомления</a>
-            <a href="#">Видимость</a>
-        </nav>
-        <div>
-            <button>Пригласить друга</button>
-            <button>Мои конкурсы</button>
-        </div>
-    </header>
+        <div class="menu">
+            <div class="menu-item"><a href="index.html">Главная</a></div>
+            <div class="menu-item"><a href="fds.html">Конкурсы</a></div>
+            <div class="menu-item"><a href="#">Новости</a></div>
+            <div class="menu-item"><a href="$">Работы по годам</a></div>
+           
+            
+    </div></header>
     <div class="profile-container">
         <div class="profile-header">
-            <img src="path_to_your_profile_image.jpg" alt="Profile Image">
+            <img src="images/e1.png" alt="Profile Image">
             <button>ИЗМЕНИТЬ ФОТО</button>
         </div>
         <form class="profile-form">
@@ -202,31 +267,37 @@
         </form>
     </div>
     <footer>
-        <div class="footer-column">
-            <ul>
-                <li>Наши продукты</li>
-                <li>Конкурсы</li>
-                <li>Подготовка к конкурсам</li>
-                <li>Полезные инструменты</li>
-                <li>Полезные видео</li>
-            </ul>
+        <div class="footer-container">
+            <div class="footer-blocks">
+                <h2>Наши продукты</h2>
+                <ul>
+                    <li><a href="#">Конкурсы</a></li>
+                    <li><a href="#">Подготовка к конкурсам</a></li>
+                    
+    <li><a href="#">Полезные инструменты</a></li><li><a href="#">Полезные видео</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-blocks">
+                <h2>Документы</h2>
+                <ul>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Договор-оферта</a></li>
+                    <li><a href="#">Договор-офера для юр. лиц</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-blocks">
+                <h2>Связь с нами</h2>
+                <ul>
+                    <li><a href="#">Написать в Telegram</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">gustav_08@mail.ru</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-column">
-            <ul>
-                <li>Документы</li>
-                <li>Политика конфиденциальности</li>
-                <li>Договор-оферта</li>
-                <li>Договор-офера для юр. лиц</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <ul>
-                <li>Связь с нами</li>
-                <li>Написать в Telegram</li>
-                <li>Вакансии</li>
-                <li>gustav_08@mail.ru</li>
-            </ul>
-        </div>
+    
+        
     </footer>
 </body>
 </html>

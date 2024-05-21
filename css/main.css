@@ -1367,16 +1367,23 @@
   .v111_104 {
   width: 40px;
   height: 40px;
-  background: rgba(255,255,255,1);
+
   opacity: 1;
   position: absolute;
   top: 2459px;
   left: 375px;
+  background: url(../images/ya.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   }
   .v111_110 {
   width: 40px;
   height: 40px;
-  background: rgba(255,255,255,1);
+  background: url(../images/vk.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   opacity: 1;
   position: absolute;
   top: 2459px;
@@ -1385,16 +1392,22 @@
   .v111_116 {
   width: 40px;
   height: 40px;
-  background: rgba(255,255,255,1);
   opacity: 1;
   position: absolute;
   top: 2408px;
   left: 430px;
+  background: url(../images/tg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
   .v111_122 {
   width: 40px;
   height: 40px;
-  background: rgba(255,255,255,1);
+  background: url(../images/yo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   opacity: 1;
   position: absolute;
   top: 2408px;
@@ -1844,7 +1857,10 @@
 .v111_122 {
   width: 40px;
   height: 40px;
-  background: rgb(255 255 255 / 0%);
+  background: url(../images/yo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   opacity: 1;
   position: absolute;
   top: 3060px;
@@ -1854,7 +1870,10 @@
 .v111_116 {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 1);
+  background: url(../images/tg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   opacity: 1;
   position: absolute;
   top: 3060px;
@@ -1863,7 +1882,10 @@
 .v111_110 {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 1);
+  background: url(../images/vk.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   opacity: 1;
   position: absolute;
   top: 3060px;
@@ -1872,7 +1894,10 @@
 .v111_104 {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 1);
+  background: url(../images/ya.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   opacity: 1;
   position: absolute;
   top: 3060px;

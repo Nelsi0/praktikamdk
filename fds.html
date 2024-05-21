@@ -61,6 +61,10 @@
     font-size: 20px;
     cursor: pointer;
 }
+.menu-item a  {
+    color: #000000 !important;
+    text-decoration: none;
+}
 /* Стили для всего футера */
 .footer {
     background-color: #333;
@@ -386,9 +390,9 @@ margin-left: 675px;
   .block1 {
     width: 281px;
     height: 100px;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     text-align: left;
-    margin-left: 1050;
+    margin-left: 570px;
     padding: 40px;
 }
 .container {
@@ -761,6 +765,12 @@ margin-left: 675px;
     height: 2300px;
 
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 952px;
+}
         }
     </style>
 
@@ -769,10 +779,10 @@ margin-left: 675px;
 
 <header>
     <div class="menu">
-        <div class="menu-item">Главная</div>
-        <div class="menu-item">Конкурсы</div>
-        <div class="menu-item">Новости</div>
-        <div class="menu-item">Работы по годам</div>
+        <div class="menu-item"><a href="index.html">Главная</a></div>
+        <div class="menu-item"><a href="fds.html">Конкурсы</a></div>
+        <div class="menu-item"><a href="#">Новости</a></div>
+        <div class="menu-item"><a href="$">Работы по годам</a></div>
        
         <div class="login-button-container" onmouseover="showButton()">
           <button class="login-button" onclick="openLoginModal()">Вход</button>
@@ -782,7 +792,7 @@ margin-left: 675px;
                   <h2 style="
     color: black;
 ">Вход</h2>
-                  <form action="/login" method="POST">
+                  <form action="tyu.html" method="POST">
                       <div class="form-group">
                           <label for="phone">Телефон:</label>
                           <input type="tel" id="phone" name="phone" pattern="\+[7]{1}[0-9]{10}" title="Введите телефон в формате +7XXXXXXXXXX" required="">
@@ -806,7 +816,7 @@ margin-left: 675px;
                   <h2 style="
     color: black;
 ">Регистрация</h2>
-                  <form action="success.html" method="POST" onsubmit="return validateForm()">
+                  <form action="tyu.html" method="POST" onsubmit="return validateForm()">
                       <div class="form-group">
                           <label for="name">Имя:</label>
                           <input type="text" id="name" name="name" required="" pattern="[а-яА-ЯёЁ]+" title="Введите имя на русском языке">
@@ -919,7 +929,7 @@ margin-left: 675px;
 <div class="blocks-container">
     <div class="person-block">
         <div class="image-container">
-            <img src="photo1.jpg" alt="Фото">
+            <img src="images/e1.png"alt="Фото">
         </div>
         <div class="info">
             <p style="
@@ -930,7 +940,7 @@ margin-left: 675px;
     </div>
     <div class="person-block">
         <div class="image-container">
-            <img src="photo2.jpg" alt="Фото">
+            <img src="images/e2.png" alt="Фото">
         </div>
         <div class="info">
             <p style="
@@ -941,7 +951,7 @@ margin-left: 675px;
     </div>
     <div class="person-block">
         <div class="image-container">
-            <img src="photo3.jpg" alt="Фото">
+            <img src="images/e3.png" alt="Фото">
         </div>
         <div class="info">
             <p style="
@@ -952,7 +962,7 @@ margin-left: 675px;
     </div>
     <div class="person-block">
         <div class="image-container">
-            <img src="photo4.jpg" alt="Фото">
+            <img src="images/e4.png" alt="Фото">
         </div>
         <div class="info">
             <p style="
@@ -1032,7 +1042,7 @@ margin-left: 675px;
 <div class="razvi">
     <div class="containerAbc">
         <div class="textXyz">РАЗВИВАЙСЯ В ТОМ, ЧТО ДЕЙСТВИТЕЛЬНО НРАВИТСЯ</div>
-        <img src="path_to_your_image.jpg" alt="Image" class="imagePqr">
+        <img src="images/razvi.png" alt="Image" class="imagePqr">
     </div>
     
 </div>
@@ -1086,7 +1096,7 @@ margin-left: 675px;
     function validateForm() {
     // Просто возвращаем true, так как повторное подтверждение пароля удалено
     // Перенаправляем пользователя на другую страницу
-    window.location.href = "success.html";
+    window.location.href = "tyu.html";
     return false; // Для предотвращения отправки формы
 }
 
