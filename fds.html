@@ -792,7 +792,7 @@ body {
                   <h2 style="
     color: black;
 ">Вход</h2>
-                  <form action="tyu.html" method="POST">
+                  <form action="tyu.html" method="POST" onsubmit="return validateForm()">
                       <div class="form-group">
                           <label for="phone">Телефон:</label>
                           <input type="tel" id="phone" name="phone" pattern="\+[7]{1}[0-9]{10}" title="Введите телефон в формате +7XXXXXXXXXX" required="">
